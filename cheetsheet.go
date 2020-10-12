@@ -6,6 +6,11 @@ import (
 )
 
 func main() {
-  fmt.Printf("Now you have %g problems.\n", math.Sqrt(7))
+  fmt.Println("Now you have %g problems.\n", math.Sqrt(7))
+  fmt.Println(add(42, 13))
+}
+
+func add(x int, y int) int {
+  return x + y
 }
 
