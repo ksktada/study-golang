@@ -11,6 +11,7 @@ func main() {
   a, b := swap("hello", "world")
   fmt.Println(a, b)
   fmt.Println(split(17))
+  variables()
 }
 
 // func
@@ -28,4 +29,16 @@ func split(sum int) (x, y int){
   x = sum * 4 / 9
   y = sum - x
   return
+}
+
+// Variables
+func variables() {
+  // initialize
+  var i, j int = 1, 2
+
+  // short variable declarations
+  k := 3
+  c, python, java := true, false, "no!"
+
+  fmt.Println(i, j, k, c, python, java)
 }
