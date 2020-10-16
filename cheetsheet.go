@@ -3,6 +3,7 @@ package main
 import (
   "fmt"
   "math"
+  "math/cmplx"
 )
 
 func main() {
@@ -12,6 +13,7 @@ func main() {
   fmt.Println(a, b)
   fmt.Println(split(17))
   variables()
+  basic_types()
 }
 
 // func
@@ -41,4 +43,16 @@ func variables() {
   c, python, java := true, false, "no!"
 
   fmt.Println(i, j, k, c, python, java)
+}
+
+// Basic Types
+func basic_types(){
+  var (
+    ToBe bool = false
+    MaxInt uint64 = 1<<64 - 1
+    z complex128 = cmplx.Sqrt(-5 + 12i)
+  )
+  fmt.Printf("Type: %T Value: %v\n", ToBe, ToBe)
+  fmt.Printf("Type: %T Value: %v\n", MaxInt, MaxInt)
+  fmt.Printf("Type: %T Value: %v\n", z, z)
 }
