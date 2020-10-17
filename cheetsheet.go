@@ -14,6 +14,7 @@ func main() {
   fmt.Println(split(17))
   variables()
   basic_types()
+  zero_values()
 }
 
 // func
@@ -55,4 +56,13 @@ func basic_types(){
   fmt.Printf("Type: %T Value: %v\n", ToBe, ToBe)
   fmt.Printf("Type: %T Value: %v\n", MaxInt, MaxInt)
   fmt.Printf("Type: %T Value: %v\n", z, z)
+}
+
+// Zero values
+func zero_values(){
+  var i int
+  var f float64
+  var b bool
+  var s string
+  fmt.Printf("%v %v %v %q\n", i, f, b, s)
 }
