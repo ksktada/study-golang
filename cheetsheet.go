@@ -15,6 +15,7 @@ func main() {
   variables()
   basic_types()
   zero_values()
+  type_conversions()
 }
 
 // func
@@ -65,4 +66,12 @@ func zero_values(){
   var b bool
   var s string
   fmt.Printf("%v %v %v %q\n", i, f, b, s)
+}
+
+// Type conversions
+func type_conversions(){
+  var x, y int = 3, 4
+  var f float64 = math.Sqrt(float64(x*x + y*y))
+  var z uint = uint(f)
+  fmt.Println(x, y, z)
 }
