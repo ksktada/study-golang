@@ -16,6 +16,7 @@ func main() {
   basic_types()
   zero_values()
   type_conversions()
+  type_inference()
 }
 
 // func
@@ -74,4 +75,10 @@ func type_conversions(){
   var f float64 = math.Sqrt(float64(x*x + y*y))
   var z uint = uint(f)
   fmt.Println(x, y, z)
+}
+
+// Type inference
+func type_inference(){
+  v := 42 // -> int
+  fmt.Printf("v is of type %T\n", v)
 }
