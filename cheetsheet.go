@@ -17,6 +17,7 @@ func main() {
   zero_values()
   type_conversions()
   type_inference()
+  constants()
 }
 
 // func
@@ -81,4 +82,17 @@ func type_conversions(){
 func type_inference(){
   v := 42 // -> int
   fmt.Printf("v is of type %T\n", v)
+}
+
+// Constants
+func constants(){
+  // you can't use ":=".
+  // only character, string, boolean, numeric
+  const Pi = 3.14
+  const World = "世界"
+  fmt.Println("Hello", World)
+  fmt.Println("Happy", Pi, "Day")
+
+  const Truth = true
+  fmt.Println("Go rules?", Truth)
 }
