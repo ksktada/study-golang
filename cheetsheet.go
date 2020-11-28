@@ -19,6 +19,7 @@ func main() {
   type_inference()
   constants()
   numeric_constants()
+  for_statement()
 }
 
 // func
@@ -112,3 +113,13 @@ func numeric_constants(){
 
 func needInt(x int) int { return x*10 + 1 }
 func needFloat(x float64) float64 { return x * 0.1 }
+
+// for
+func for_statement(){
+  sum := 0
+  for i := 0; i < 10; i++ {
+    sum += i
+  }
+  fmt.Println(sum)
+}
+
