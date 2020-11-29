@@ -20,6 +20,7 @@ func main() {
   constants()
   numeric_constants()
   for_statement()
+  for_while()
 }
 
 // func
@@ -119,6 +120,15 @@ func for_statement(){
   sum := 0
   for i := 0; i < 10; i++ {
     sum += i
+  }
+  fmt.Println(sum)
+}
+
+// for is Go's while
+func for_while(){
+  sum := 1
+  for sum < 1000 {
+    sum += sum
   }
   fmt.Println(sum)
 }
