@@ -133,3 +133,11 @@ func for_while(){
   fmt.Println(sum)
 }
 
+// forever
+// don't call this method
+func forever(){
+  for {
+  }
+}
+
+
