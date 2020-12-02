@@ -22,6 +22,7 @@ func main() {
   for_statement()
   for_while()
   fmt.Println(sqrt(2), sqrt(-4))
+  fmt.Println(pow(3,2,10), pow(3,3,20))
 }
 
 // func
@@ -149,3 +150,10 @@ func sqrt(x float64) string{
   return fmt.Sprint(math.Sqrt(x))
 }
 
+// if with a short statement
+func pow(x, n, lim float64) float64 {
+  if v:= math.Pow(x, n); v < lim {
+    return v
+  }
+  return lim
+}
