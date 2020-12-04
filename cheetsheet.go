@@ -4,6 +4,7 @@ import (
   "fmt"
   "math"
   "math/cmplx"
+  "runtime"
 )
 
 func main() {
@@ -24,6 +25,7 @@ func main() {
   fmt.Println(sqrt(2), sqrt(-4))
   fmt.Println(pow(3,2,10), pow(3,3,20))
   fmt.Println(pow2(3,2,10), pow2(3,3,20))
+  switch_statement()
 }
 
 // func
@@ -168,4 +170,19 @@ func pow2(x,n, lim float64) float64 {
   }
   // can't v here, though
   return lim
+}
+
+// switch
+func switch_statement() {
+  fmt.Print("Go runs on ")
+  switch os := runtime.GOOS; os {
+  case "darwin":
+    fmt.Println("OS X.")
+  case "linux":
+    fmt.Println("Linux.")
+  default:
+    // freebsd, openbsd,
+    // plan9 windows...
+    fmt.Printf("%s.\n", os)
+  }
 }
