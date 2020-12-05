@@ -5,6 +5,7 @@ import (
   "math"
   "math/cmplx"
   "runtime"
+  "time"
 )
 
 func main() {
@@ -26,6 +27,7 @@ func main() {
   fmt.Println(pow(3,2,10), pow(3,3,20))
   fmt.Println(pow2(3,2,10), pow2(3,3,20))
   switch_statement()
+  switch_eval()
 }
 
 // func
@@ -184,5 +186,20 @@ func switch_statement() {
     // freebsd, openbsd,
     // plan9 windows...
     fmt.Printf("%s.\n", os)
+  }
+}
+
+// switch evaluation order
+func switch_eval(){
+  fmt.Println("When's Saturday?")
+  today := time.Now().Weekday()
+  case today + 0:
+    fmt.Println("Today.")
+  case today + 1:
+    fmt.Println("Tomorrow.")
+  case today + 2:
+    fmt.Println("In tow days.")
+  default:
+    fmt.Println("Too far away.")
   }
 }
