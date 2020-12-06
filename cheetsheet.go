@@ -28,6 +28,7 @@ func main() {
   fmt.Println(pow2(3,2,10), pow2(3,3,20))
   switch_statement()
   switch_eval()
+  defer_statement()
 }
 
 // func
@@ -203,4 +204,10 @@ func switch_eval(){
   default:
     fmt.Println("Too far away.")
   }
+}
+
+// defer
+func defer_statement(){
+  defer fmt.Println("world")
+  fmt.Println("hello")
 }
