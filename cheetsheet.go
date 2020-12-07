@@ -29,6 +29,7 @@ func main() {
   switch_statement()
   switch_eval()
   defer_statement()
+  stack_defers()
 }
 
 // func
@@ -210,4 +211,15 @@ func switch_eval(){
 func defer_statement(){
   defer fmt.Println("world")
   fmt.Println("hello")
+}
+
+// stacking defers
+func stack_defers() {
+  fmt.Println("counting")
+
+  for i:=0; i < 10; i++ {
+    defer fmt.Println(i)
+  }
+
+  fmt.Println("done")
 }
