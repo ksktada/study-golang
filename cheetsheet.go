@@ -31,6 +31,7 @@ func main() {
   defer_statement()
   stack_defers()
   pointers()
+  struct_statement()
 }
 
 // func
@@ -237,4 +238,14 @@ func pointers() {
   p = &j          // point to j
   *p = *p / 37    // divide j through the pointer
   fmt.Println(j)  // see the new value of j
+}
+
+// structs
+type Vertex struct {
+  X int
+  Y int
+}
+
+func struct_statement(){
+  fmt.Println(Vertex{1,2})
 }
