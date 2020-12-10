@@ -33,6 +33,7 @@ func main() {
   pointers()
   struct_statement()
   struct_field()
+  struct_pointer()
 }
 
 // func
@@ -255,4 +256,11 @@ func struct_field(){
   v := Vertex{1, 2}
   v.X = 4
   fmt.Println(v.X)
+}
+
+func struct_pointer(){
+  v := Vertex{1, 2}
+  p := &v
+  p.X = 1e9
+  fmt.Println(v)
 }
