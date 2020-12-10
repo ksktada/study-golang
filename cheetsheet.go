@@ -32,6 +32,7 @@ func main() {
   stack_defers()
   pointers()
   struct_statement()
+  struct_field()
 }
 
 // func
@@ -248,4 +249,10 @@ type Vertex struct {
 
 func struct_statement(){
   fmt.Println(Vertex{1,2})
+}
+
+func struct_field(){
+  v := Vertex{1, 2}
+  v.X = 4
+  fmt.Println(v.X)
 }
